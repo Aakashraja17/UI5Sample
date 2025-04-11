@@ -1,0 +1,104 @@
+{
+    "tools": {
+        "toolsName": "mitre saw",
+        "uses": "cutting wood at precise angles",
+        "availability": "in stock",
+        "price": 15000,
+        "unit": "INR",
+        "image": "https://m.media-amazon.com/images/I/71WWIlMgP9L._AC_UF1000,1000_QL80_.jpg",
+        "weight": "15kg",
+        "warranty": "2 years"
+    },
+    "toolData": [
+        {
+            "toolsName": "mitre saw",
+            "uses": "cutting wood at precise angles",
+            "availability": "unavailable",
+            "price": 15000,
+            "unit": "INR",
+            "image": "https://atlas-content-cdn.pixelsquid.com/stock-images/mitre-saw-miter-0Mm39RC-600.jpg",
+            "weight": "15kg",
+            "warranty": "2 years"
+        },
+        {
+            "toolsName": "hammer",
+            "uses": "driving nails into wood",
+            "availability": "in stock",
+            "price": 500,
+            "unit": "INR",
+            "image": "https://img.freepik.com/free-vector/claw-hammer-sticker-white-background_1308-80363.jpg",
+            "weight": "1kg",
+            "warranty": "1 year"
+        },
+        {
+            "toolsName": "angle grinder",
+            "uses": "grinding and cutting metal",
+            "availability": "in stock",
+            "price": 3000,
+            "unit": "INR",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/AngleGrinder.jpg/800px-AngleGrinder.jpg",
+            "weight": "3kg",
+            "warranty": "1 year"
+        },
+        {
+            "toolsName": "allen key",
+            "uses": "tightening hex screws",
+            "availability": "in stock",
+            "price": 200,
+            "unit": "INR",
+            "image": "https://5.imimg.com/data5/SELLER/Default/2021/12/UJ/AA/ZG/37616215/18mm-allen-key.jpg",
+            "weight": "0.1kg",
+            "warranty": "6 months"
+        },
+        {
+            "toolsName": "drill",
+            "uses": "drilling holes in various materials",
+            "availability": "in stock",
+            "price": 2500,
+            "unit": "INR",
+            "image": "https://www.shutterstock.com/image-photo/cordless-drill-screwdriver-bit-on-260nw-1048446001.jpg",
+            "weight": "2kg",
+            "warranty": "1 year"
+        },
+        {
+            "toolsName": "cordless drill",
+            "uses": "drilling holes without power cord",
+            "availability": "in stock",
+            "price": 4500,
+            "unit": "INR",
+            "image": "https://m.media-amazon.com/images/I/81yyS0lKpOL.jpg",
+            "weight": "2.5kg",
+            "warranty": "1 year"
+        },
+        {
+            "toolsName": "table saw",
+            "uses": "cutting large pieces of wood",
+            "availability": "in stock",
+            "price": 20000,
+            "unit": "INR",
+            "image": "https://t4.ftcdn.net/jpg/02/50/10/97/360_F_250109782_IIwUlerJRRnYp0wi3nqwuIvkL200MBIV.jpg",
+            "weight": "20kg",
+            "warranty": "2 years"
+        },
+        {
+            "toolsName": "file",
+            "uses": "smoothing rough edges",
+            "availability": "in stock",
+            "price": 150,
+            "unit": "INR",
+            "image": "https://www.shutterstock.com/image-photo/two-flat-steel-files-rubber-260nw-2108057732.jpg",
+            "weight": "0.2kg",
+            "warranty": "6 months"
+        },
+        {
+            "toolsName": "screw",
+            "uses": "fastening materials together",
+            "availability": "in stock",
+            "price": 50,
+            "unit": "INR",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Phillips_screw.jpg/1024px-Phillips_screw.jpg",
+            "weight": "0.05kg",
+            "warranty": "6 months"
+        }
+    ]
+}

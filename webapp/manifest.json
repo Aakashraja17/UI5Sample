@@ -1,0 +1,109 @@
+{
+  "_version": "1.65.0",
+  "sap.app": {
+    "id": "app.splitapp",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.17.1",
+      "toolsId": "4978428a-9cf2-453a-a4f9-73ceb735e166"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.134.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "app.splitapp.i18n.i18n"
+        }
+      },
+      "ToolsData":{
+        "type":"sap.ui.model.json.JSONModel",
+        "uri":"model/mockData/toolsData.json"
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "app.splitapp.view",
+        "async": true,
+        "viewPath": "app.splitapp.view"
+      },
+      "routes": [
+        {
+          "name": "RouteMasterView",
+          "pattern": "",
+          "target":"TargetMasterView"
+        },
+        {
+          "name": "RouteDetailView",
+          "pattern": "RouteDetailView/{index}",
+          "target":"TargetDetailView"
+        }
+      ],
+      "targets": {
+        "TargetMasterView": {
+          "id": "MasterView",
+          "name": "MasterView"
+        },
+        "TargetDetailView": {
+          "id":"idDetail",
+          "name":"DetailView"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "app.splitapp.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}

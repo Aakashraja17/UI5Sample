@@ -1,0 +1,26 @@
+<mvc:View controllerName="app.splitapp.controller.DetailView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form">
+		<Page id="idDetail" title="Detail View" showNavButton="true" navButtonPress="onListView">
+				<f:SimpleForm editable="true" id="idSimple">
+					<Label text="Toolsname"></Label>
+					<Input id='idinput1' value="{ToolsData>toolsName}"></Input>
+					<Label text="Uses"></Label>
+					<Input id='idinput2' value="{ToolsData>uses}"></Input>
+					<Label text="availability"></Label>
+					<Input id='idinput3' value="{ToolsData>availability}"></Input>
+					<Label text="price"></Label>
+					<Input id='idinput4' value="{ToolsData>price}"></Input>
+					<Label text="unit"></Label>
+					<Input id='idinput5' value="{ToolsData>unit}"></Input>
+					<Label text="Image"></Label>
+					<Image id='input6' src="{ToolsData>image}" width="200px" height="200px"></Image>
+					<Label text="weight"></Label>
+					<Input id='idinput7' value="{ToolsData>weight}"></Input>
+					<Label text="warranty"></Label>
+					<Input id='idinput8' value="{ToolsData>warranty}"></Input>
+					<Button text="Display" press="onPress"></Button>
+				</f:SimpleForm>
+			</Page>
+</mvc:View>
