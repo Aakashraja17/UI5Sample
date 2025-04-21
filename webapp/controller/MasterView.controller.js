@@ -21,6 +21,10 @@ sap.ui.define([
             oRouter.navTo("RouteDetailView");
 
         },
+        onFormView:function(){
+                let oRouter = this.getOwnerComponent().getRouter();
+                oRouter.navTo("RouteFormView");
+        },
         onSort: function () {
             if (!this.bDescending) {
                 this.bDescending = false;

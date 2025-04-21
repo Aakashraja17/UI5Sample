@@ -1,0 +1,27 @@
+<mvc:View controllerName="app.splitapp.controller.FormView"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form">
+    <Page id="idForm" title="Form" showNavButton="true" navButtonPress="onListView">
+        <f:SimpleForm >
+            <Label text="Toolsname"></Label>
+			<Input id='idinp1'></Input>
+			<Label text="Uses"></Label>
+			<Input id='idinp2'></Input>
+			<Label text="availability"></Label>
+			<Input id='idinp3'></Input>
+			<Label text="price"></Label>
+			<Input id='idinp4'></Input>
+			<Label text="unit"></Label>
+			<Input id='idinp5'></Input>
+			<Label text="Image"></Label>
+			<Image id='inp6'  width="200px" height="200px"></Image>
+			<Label text="weight"></Label>
+			<Input id='idinp7'></Input>
+			<Label text="warranty"></Label>
+			<Input id='idinp8'></Input>
+			<Button text="Display" press="onPress"></Button>
+        </f:SimpleForm>
+    </Page>
+</mvc:View>

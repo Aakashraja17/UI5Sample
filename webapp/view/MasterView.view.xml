@@ -1,43 +1,41 @@
 <mvc:View controllerName="app.splitapp.controller.MasterView"
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
 	<Page title="List View" id="MasterView">
-				<headerContent>
-					<Button icon="sap-icon://action" tooltip="Share" press="onDetailView"/>
-					<Button icon="sap-icon://sort"  press="onSort"/>
-				</headerContent>
-				<subHeader>
-					<OverflowToolbar>
-						<SearchField search="onSearch" liveChange="onSearch"/>
-					</OverflowToolbar>
-				</subHeader>
-				<content>
-					<List items="{ToolsData>/toolData}" id="idList" mode="SingleSelectMaster" selectionChange="onItemSelect">
-						<items>
-							<ObjectListItem
+		<headerContent>
+			<Button icon="sap-icon://action" tooltip="Share" press="onDetailView"/>
+			<Button icon="sap-icon://sort"  press="onSort"/>
+		</headerContent>
+		<subHeader>
+			<OverflowToolbar>
+				<SearchField search="onSearch" liveChange="onSearch"/>
+			</OverflowToolbar>
+		</subHeader>
+		<content>
+			<List items="{ToolsData>/toolData}" id="idList" mode="SingleSelectMaster" selectionChange="onItemSelect">
+				<items>
+					<ObjectListItem
 								icon="{ToolsData>image}"
 								intro="{ToolsData>toolsName}" number="{ToolsData>price}" numberState="Success" numberUnit="{ToolsData>unit}">
-								<attributes>
-									<ObjectAttribute text="{ToolsData>weight}" title="weight"></ObjectAttribute>
-									<ObjectAttribute text="{ToolsData>warranty}" title="warranty"></ObjectAttribute>
-								</attributes>
-								<firstStatus>
-									<ObjectStatus text="{ToolsData>availability}" title="Availability" state="Success"></ObjectStatus>
-								</firstStatus>
-								
-							</ObjectListItem>
-							
-						</items>
-					</List>
-				</content>
-				<footer>
-					<OverflowToolbar>
-						<ToolbarSpacer/>
-						<Button text="Accept" type="Accept" width="150px"/>
-						<Button text="Reject" type="Reject" width="150px"/>
-						<Button text="Edit" width="150px"/>
-						<Button text="Delete" width="150px"/>
-					</OverflowToolbar>
-				</footer>
+						<attributes>
+							<ObjectAttribute text="{ToolsData>weight}" title="weight"></ObjectAttribute>
+							<ObjectAttribute text="{ToolsData>warranty}" title="warranty"></ObjectAttribute>
+						</attributes>
+						<firstStatus>
+							<ObjectStatus text="{ToolsData>availability}" title="Availability" state="Success"></ObjectStatus>
+						</firstStatus>
+					</ObjectListItem>
+				</items>
+			</List>
+		</content>
+		<footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Button text="Create" width="150px" press="onFormView"/>
+				<!-- <Button text="Reject" type="Reject" width="150px"/>
+				<Button text="Edit" width="150px"/>
+				<Button text="Delete" width="150px"/> -->
+			</OverflowToolbar>
+		</footer>
 	</Page>
 </mvc:View>

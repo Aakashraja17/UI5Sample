@@ -80,22 +80,43 @@
         {
           "name": "RouteMasterView",
           "pattern": "",
-          "target":"TargetMasterView"
+          "target":["TargetMasterView","TargetEmpty"]
         },
         {
           "name": "RouteDetailView",
           "pattern": "RouteDetailView/{index}",
-          "target":"TargetDetailView"
+          "target":["TargetDetailView"]
+        },
+        {
+          "name": "RouteFormView",
+          "pattern": "RouteFormView",
+          "target":["TargetForm"]
         }
       ],
       "targets": {
         "TargetMasterView": {
           "id": "MasterView",
-          "name": "MasterView"
+          "name": "MasterView",
+          "controlAggregation": "masterPages",
+          "viewLevel":1
         },
         "TargetDetailView": {
           "id":"idDetail",
-          "name":"DetailView"
+          "name":"DetailView",
+          "controlAggregation": "detailPages",
+          "viewLevel":2
+        },
+        "TargetEmpty":{
+          "id":"idEmpty",
+          "name":"Empty",
+          "controlAggregation": "detailPages",
+          "viewLevel":1
+        },
+        "TargetForm":{
+          "id":"idForm",
+          "name":"FormView",
+          "controlAggregation": "detailPages",
+          "viewLevel":2
         }
       }
     },

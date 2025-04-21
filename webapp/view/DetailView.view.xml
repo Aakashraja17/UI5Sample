@@ -1,26 +1,84 @@
 <mvc:View controllerName="app.splitapp.controller.DetailView"
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m"
-    xmlns:f="sap.ui.layout.form">
-		<Page id="idDetail" title="Detail View" showNavButton="true" navButtonPress="onListView">
-				<f:SimpleForm editable="true" id="idSimple">
-					<Label text="Toolsname"></Label>
-					<Input id='idinput1' value="{ToolsData>toolsName}"></Input>
-					<Label text="Uses"></Label>
-					<Input id='idinput2' value="{ToolsData>uses}"></Input>
-					<Label text="availability"></Label>
-					<Input id='idinput3' value="{ToolsData>availability}"></Input>
-					<Label text="price"></Label>
-					<Input id='idinput4' value="{ToolsData>price}"></Input>
-					<Label text="unit"></Label>
-					<Input id='idinput5' value="{ToolsData>unit}"></Input>
-					<Label text="Image"></Label>
-					<Image id='input6' src="{ToolsData>image}" width="200px" height="200px"></Image>
-					<Label text="weight"></Label>
-					<Input id='idinput7' value="{ToolsData>weight}"></Input>
-					<Label text="warranty"></Label>
-					<Input id='idinput8' value="{ToolsData>warranty}"></Input>
-					<Button text="Display" press="onPress"></Button>
-				</f:SimpleForm>
-			</Page>
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:comp="sap.ui.comp.filterbar"
+	xmlns:f="sap.ui.layout.form">
+	<Page id="idDetail" title="Detail View" showNavButton="true" navButtonPress="onListView">
+		<f:SimpleForm editable="true" id="idSimple">
+			<Label text="Toolsname"></Label>
+			<Input id='idinput1' value="{ToolsData>toolsName}"></Input>
+			<Label text="Uses"></Label>
+			<Input id='idinput2' value="{ToolsData>uses}"></Input>
+			<Label text="availability"></Label>
+			<Input id='idinput3' value="{ToolsData>availability}"></Input>
+			<Label text="price"></Label>
+			<Input id='idinput4' value="{ToolsData>price}"></Input>
+			<Label text="unit"></Label>
+			<Input id='idinput5' value="{ToolsData>unit}"></Input>
+			<Label text="Image"></Label>
+			<Image id='input6' src="{ToolsData>image}" width="200px" height="200px"></Image>
+			<Label text="weight"></Label>
+			<Input id='idinput7' value="{ToolsData>weight}"></Input>
+			<Label text="warranty"></Label>
+			<Input id='idinput8' value="{ToolsData>warranty}"></Input>
+			<Button text="Display" press="onPress"></Button>
+		</f:SimpleForm>
+		<IconTabBar >
+			<items>
+				<IconTabFilter icon="sap-icon://information">
+					<VBox>
+						<f:SimpleForm editable="true" id="idSimp">
+							<HBox>
+								<Label text="Toolsname"></Label>
+								<Input id='id1' value="{ToolsData>toolsName}"></Input>
+							</HBox>
+							<HBox>
+								<Label text="Uses"></Label>
+								<Input id='id2' value="{ToolsData>uses}"></Input>
+							</HBox>
+							<HBox>
+								<Label text="availability"></Label>
+								<Input id='id3' value="{ToolsData>availability}"></Input>
+							</HBox>
+						</f:SimpleForm>
+					</VBox>
+				</IconTabFilter>
+				<!-- <comp:FilterBar><comp:filterItems><comp:FilterItem></comp:FilterItem></comp:filterItems></comp:FilterBar> -->
+				<!-- <Input id="idInputSupp"></Input> -->
+				<IconTabFilter icon="sap-icon://supplier">
+					<Label text="Supplier"></Label>
+					<Input id="idInputSupp" width="200px" liveChange="onFilter"></Input>
+					<Label text="City"></Label>
+					<Input id="idInputCity" width="200px" liveChange="onFilter"></Input>
+					<Table items="{ToolsData>/supplierSet}" id="idSupTable">
+						<columns>
+							<Column>
+								<Text text="aaaa"></Text>
+							</Column>
+							<Column>
+								<Text text="aa"></Text>
+							</Column>
+							<Column>
+								<Text text="ab"></Text>
+							</Column>
+							<Column>
+								<Text text="ac"></Text>
+							</Column>
+						</columns>
+						<ColumnListItem >
+							<cells>
+								<Text text="{ToolsData>toolsName}"></Text>
+								<Input value="{ToolsData>supplierName}"
+												showValueHelp="true"
+												valueHelpRequest="onF4Help"
+										></Input>
+								<Text text="{ToolsData>contact}"></Text>
+								<Text text="{ToolsData>location}"></Text>
+							</cells>
+						</ColumnListItem>
+					</Table>
+				</IconTabFilter>
+			</items>
+		</IconTabBar>
+	</Page>
 </mvc:View>
